@@ -1,0 +1,215 @@
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+button
+  background: none
+
+.page__body
+  font-family: sans-serif
+  background-color: #f0f0f0
+
+.modal-calendar
+  max-width: 1440px
+  margin: 0 auto
+  padding: 32px 0
+
+.modal-container
+  background-color: white
+
+.modal-header
+  display: flex
+  position: relative
+  &__title
+    display: flex
+    align-items: center
+    flex-grow: 1
+    justify-content: center
+    padding: 30px 0 0 0
+    font-size: 22px
+    font-style: normal
+    font-weight: normal
+  &__button
+    background-image: url('../image/close-btn.svg')
+    background-repeat: no-repeat
+    background-size: cover
+    position: absolute
+    right: 0px
+    margin: 20px
+    padding: 12px
+    border: 0
+    cursor: pointer
+    
+.modal-body
+  max-width: 600px
+  margin: 0 auto
+
+.select
+  margin: 25px 0 0 0
+  .select-header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    height: 40px
+    background: #96C850
+    border-radius: 3px
+    &__title
+      font-size: 16px
+      color: white
+    &__button
+      background-image: url('../image/arrow.svg')
+      background-repeat: no-repeat
+      background-size: auto
+      height: 11px
+      width: 8px
+      position: relative
+      left: 25px
+      border: 0
+      cursor: pointer
+    &__image
+      position: relative
+      right: 25px
+.carousel
+  margin: 25px 0 0 0
+  position: relative
+  &__list
+    display: inline-flex
+    width: 100%
+    justify-content: space-evenly
+    list-style-type: none
+    text-align: center
+  &__item
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 18px
+    line-height: 1.5
+    &:first-child
+      margin: 0 0 0 22px
+    &:last-child
+      margin: 0 22px 0 0
+  &__item_active
+    background: #96C850
+    color: white
+    max-width: 176px
+    min-width: 143px
+    height: 63px
+    border-radius: 3px
+  &__arrow-left
+    position: absolute
+    top: 20px
+    left: 55px
+    background-image: url('../image/arrow-slide.svg')
+    background-repeat: no-repeat
+    background-size: auto
+    height: 11px
+    width: 8px
+    border: 0
+    cursor: pointer
+  &__arrow-right
+    position: absolute
+    top: 20px
+    right: 55px
+    transform: rotate(-180deg)
+    background-image: url('../image/arrow-slide.svg')
+    background-repeat: no-repeat
+    background-size: auto
+    height: 11px
+    width: 8px
+    border: 0
+    cursor: pointer
+
+.morning, .day, .evening
+  max-width: 500px
+  margin: 0 auto
+  padding: 0 0 25px 0
+  &__title
+    margin: 25px 0 0 25px
+    font-size: 18px
+    text-transform: uppercase
+    color: #96C850
+    font-weight: bold
+  &__list
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-column-gap: 41px
+    grid-row-gap: 15px
+    list-style-type: none
+    margin: 15px 0 0 0
+  &__item
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 12px
+    width: 94px
+    height: 35.57px
+    border: 1px solid black
+    color: black
+    border-radius: 3px
+    cursor: pointer
+  &__item:hover
+    border: 1px solid #96C850
+    color: #96C850
+  &__item:active
+    background-color: #96C850
+    color: white
+  &__item_disabled
+    border: 1px solid #9B9B9B
+    color: #9B9B9B
+.modal-footer
+  text-align: center
+  padding: 0 0 25px 0
+  &__button
+    width: 110px
+    height: 28px
+    background: #96C850
+    border-radius: 3px
+    border: none
+    color: white
+    cursor: pointer
+    &_disabled
+      background: white
+      border: 0.5px solid #9B9B9B
+      border-radius: 3px
+      color: #9B9B9B
+
+@media (max-width: 1200px)
+  .morning, .day, .evening
+    &__list
+      grid-template-columns: repeat(3, 1fr)
+
+@media (max-width: 810px)
+  .modal-container
+    min-width: 320px
+    margin: 0 15px
+
+  .select-header
+    max-width: 240px
+    margin: 0 auto
+
+  .modal-header
+    &__button
+      margin: 10px
+
+  .carousel
+    &__arrow-left
+      left: 10px
+    &__arrow-right
+      right: 10px
+  .morning, .day, .evening
+    &__list
+      grid-template-columns: repeat(2, 1fr)
+      justify-items: center
+      grid-column-gap: 0
+      margin: 15px 40px 0 40px
+    &__title
+      margin: 25px 0 0 0
+      text-align: center
+
+@media (max-width: 375px)
+  .carousel
+    &__arrow-left
+      left: 15px
+    &__arrow-right
+      right: 15px

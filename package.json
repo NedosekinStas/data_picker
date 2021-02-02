@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "type": "module",
+  "name": "update_build_gulp",
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": " <nedosekinstanislav@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-terser": "^2.0.0"
+  }
+}
